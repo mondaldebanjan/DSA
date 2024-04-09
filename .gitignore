@@ -6,3 +6,5 @@ bazel-*/
 /aliases/
 /hdrs/
 xr_bzl_cache/**
+.bazelrc
+MODULE.bazel*
