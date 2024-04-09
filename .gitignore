@@ -1,0 +1,8 @@
+# Bazel build related files
+*BUILD.bazel
+bzl-import/
+bzl-gen/
+bazel-*/
+/aliases/
+/hdrs/
+xr_bzl_cache/**
