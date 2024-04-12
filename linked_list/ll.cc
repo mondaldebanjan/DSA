@@ -178,12 +178,11 @@ Node* deleteAtEnd(Node* currentNode){
     }
 
     if(temp->next){
-        temp->next = NULL;
         free(temp->next);
-    }
-    else{
-        currentNode = NULL;
+        temp->next = NULL;
+    } else{
         free(currentNode);
+        currentNode = NULL;
     }
 
     return currentNode;

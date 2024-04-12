@@ -50,13 +50,13 @@ void test_linked_list(vector<int> arr, int num)
     displayNode(root);
     cout << "Number of nodes : " << countNodes(root) <<endl;
     cout<<"----------------------------------------------"<<endl;
+#endif
 
     while(root){
         root = deleteAtEnd(root);
     }
     cout << "Number of nodes after destroy: " << countNodes(root) <<endl;
     cout<<"----------------------------------------------"<<endl;
-#endif
 
 }
 

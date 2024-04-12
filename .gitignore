@@ -8,3 +8,5 @@ bazel-*/
 xr_bzl_cache/**
 .bazelrc
 MODULE.bazel*
+bazel-*
+.vscode/settings.json
