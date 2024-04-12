@@ -2,8 +2,8 @@
 #include <vector>
 
 #define TEST_1 0
-#define TEST_2 0
-#define TEST_3 1
+#define TEST_2 1
+#define TEST_3 0
 
 void test_bst(vector<int> arr) {
     Tree_node* root = NULL;
@@ -42,6 +42,9 @@ void test_bst(vector<int> arr) {
     cout << "Preorder traversal : "; for(auto arr: preorderBT(root)) cout << arr <<" "; cout << endl;
     cout << "Postorder traversal : "; for(auto arr: postorderBT(root)) cout << arr <<" "; cout << endl;
     cout << "Levelorder traversal : "; for(auto arr: levelorderBT(root)) cout << arr <<" "; cout << endl;
+    destroyTree(&root);
+    cout<<"After destroy"<<endl;
+    printBT(root);
     cout << "-----------------------------------------------------------------------" <<endl;
 #endif
 }
@@ -70,6 +73,10 @@ int main()
     vector<int> preorderArr = {0, 1, 3, 4, 2, 5};
     Tree_node* root = createTreeFromInorderPreorder(inorderArr, preorderArr);
     printBT(root);
+    destroyTree(&root);
+    cout<<"After destroy"<<endl;
+    printBT(root);
+    cout<<"---------------"<<endl;
 #endif
 
     return 0;

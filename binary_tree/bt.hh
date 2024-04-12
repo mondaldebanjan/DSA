@@ -17,5 +17,5 @@ vector<int> preorderBT(Tree_node* currentNode);
 vector<int> postorderBT(Tree_node* currentNode);
 vector<int> levelorderBT(Tree_node* currentNode);
 Tree_node* createTreeFromInorderPreorder(vector<int> inOrderArr, vector<int> preOrderArr);
-
+void destroyTree(Tree_node** currentNode);
 #endif

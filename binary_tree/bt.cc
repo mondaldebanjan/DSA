@@ -160,3 +160,16 @@ createTreeFromInorderPreorder(vector<int> inOrderArr, vector<int> preOrderArr)
     //we have to perform the recursion based on left and right subtree
     return createTreeFromInorderPreorder_helper(inOrderArr, preOrderArr, 0, inOrderArr.size()-1, 0, preOrderArr.size()-1);
 }
+
+void destroyTree(Tree_node** currentNode){
+    if(*currentNode == NULL){
+        return;
+    }
+    //delete right subtree and left subtree
+    destroyTree(&((*currentNode)->left));
+    destroyTree(&((*currentNode)->right));
+
+    //then delete own
+    free(*currentNode);
+    *currentNode = NULL;
+}
